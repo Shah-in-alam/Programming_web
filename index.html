@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //ES6
+        let firstname="Shahin";
+        let familyname="Alam";
+        let fullname=`${firstname} the awasome teacher ${familyname}`;
+        const appname="tinder";
+
+        firstname="Shahina";
+        // const getFullname= (fn,ln)=>{
+        //     return `${fn} ${ln}`
+        // };
+
+        const getFullname=(fn,ln)=>`${fn} ${ln}`;
+        const square=number=> number * number;
+
+        let user={
+            username:"shahin",
+            password:"shahyeqdaqyaeh"
+        };
+
+        //let password=user.password;
+        let {password}=user;
+        console.log(password);
+
+        // console.log(firstname);
+        // console.log(fullname);
+        // console.log(getFullname(firstname,familyname));
+        // console.log(square(5));
+        let goats=["T-rex","shahin"];
+        let chickens=["Chickens","chickens2"];
+        let animals=[...goats];
+        let copyChickens=[...goats];
+
+
+        class Animal{
+            /**
+             *
+             */
+            constructor(fn) {
+                this.name=fn;
+                
+            }
+            sayHello(){
+                console.log(`Hello, I am ${this.name}`);
+            }
+        }
+
+        class Goat extends Animal{
+            /**
+             *here add with other 
+             */
+            constructor(fn) {
+                super(fn);
+                
+            }
+            escape()
+            {
+                console.log("I don't like this garden anymore,bye.");
+            }
+        }
+
+        let babyGoat=new Animal("Filp");
+        babyGoat.sayHello();
+        //babyGoat.escape();
+
+        let students=[
+            {
+                studentname:"Mohammad",
+                grade:10
+            },
+            {
+                studentname:"Lisa",
+                grade:10
+            },
+            {
+                studentname:"Velska",
+                grade:10
+            }
+
+        ];
+            students.forEach((student)=>
+            {
+                console.log(student.studentname);
+            });
+
+            // students.forEach((student)=>
+            // {
+            //     student.grade=student.grade *10;
+            //     return student;
+            // });
+
+            let person={
+                name:"Shahin",
+                sayHi()
+                {
+                    alret("How you doing");
+                }
+            };
+
+            person.name="Shahin alam";
+            person['name']="Shahin Alam";
+
+           
+
+            let studentPassed=students.filter(student =>student.grade>=50);
+            console.log(students);
+            console.log(studentPassed);
+        
+    </script>
+</body>
+</html>
